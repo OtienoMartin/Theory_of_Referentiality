@@ -23,13 +23,13 @@ body {
   min-height: 100vh;
 }
 
-/* Navbar Styling - Now Sticky at the top */
+/* Navbar Styling - Sticky at the top */
 .navbar {
   background-color: #333;
   padding: 1rem;
   position: sticky;
   top: 0;
-  z-index: 2000; /* Higher than header */
+  z-index: 2000;
 }
 
 .nav-links {
@@ -57,7 +57,7 @@ body {
   color: var(--primary);
 }
 
-/* Header styling - Changed from 'fixed' to 'relative' to prevent overlap */
+/* Header styling - Modified for centering */
 .header {
   position: relative; 
   background: linear-gradient(to right, var(--primary), var(--primary-dark));
@@ -67,15 +67,21 @@ body {
   z-index: 1000;
   font-size: 1.5em;
   font-weight: bold;
+}
+
+/* Targets the div inside .header to center content */
+.header > div {
   display: flex;
   align-items: center;
+  justify-content: center; /* This centers the content horizontally */
+  width: 100%;
 }
 
 .header i {
   margin-right: 15px;
 }
 
-/* Main content padding - Adjusted since header is no longer floating */
+/* Main content padding */
 .main {
   padding: 30px 15px;
   max-width: 960px;

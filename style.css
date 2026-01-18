@@ -50,6 +50,7 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 0.9rem; /* Updated font size */
     transition: color 0.3s;
     padding: 5px 0;
     border-bottom: 2px solid transparent; /* Prepare for active indicator */
