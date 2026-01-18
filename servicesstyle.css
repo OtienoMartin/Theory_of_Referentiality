@@ -1,0 +1,143 @@
+/* style.css */
+:root {
+  --primary: #FF8C00;
+  --primary-dark: #E67E00;
+  --white: #FFFFFF;
+  --off-white: #FFF5E6;
+  --dark: #333333;
+  --gray: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Cambria Math', serif;
+  background-color: var(--off-white);
+  color: var(--dark);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navbar Styling - Now Sticky at the top */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 2000; /* Higher than header */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 5px 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Header styling - Changed from 'fixed' to 'relative' to prevent overlap */
+.header {
+  position: relative; 
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  color: var(--white);
+  padding: 20px 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.header i {
+  margin-right: 15px;
+}
+
+/* Main content padding - Adjusted since header is no longer floating */
+.main {
+  padding: 30px 15px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Service cards */
+.service-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--primary);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.service-card h2 {
+  color: var(--primary);
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+}
+
+.service-card h2 span {
+  background: var(--primary);
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+.service-card p {
+  color: var(--gray);
+  font-size: 1em;
+  line-height: 1.6;
+  text-align: justify;
+}
