@@ -3,7 +3,7 @@
 Experimental proof and foundational equations by Otieno Martin Owuor.
 
 ## Main Document
-- [On the Experimental Proof of the Fundamental Equations of the Theory of Referentiality.pdf](https://drive.google.com/file/d/1MUCliadtUw6I1q0o9KwcrJhU5gwjKv8J/preview) — Full paper with setup diagrams and derivations.
+- [On the Experimental Proof of the Fundamental Equations of the Theory of Referentiality.pdf](https://drive.google.com/file/d/1r-PEpbBLNtgLEvrBFklQPlXK20UtMKr2/view?usp=sharing) — Full paper with setup diagrams and derivations.
 
 ## Key Claims
 - Proportionality constant in Newton's second law is ½ (F = ½ ma)
