@@ -51,10 +51,18 @@ body {
     color: white;
     font-weight: bold;
     transition: color 0.3s;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent; /* Prepare for active indicator */
 }
 
 .nav-links a:hover {
     color: var(--primary);
+}
+
+/* NEW: Active Style - Highlights the current page link */
+.nav-links a.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
 }
 
 /* Main Container - Updated with Gap and Rounded Corners */
