@@ -193,38 +193,47 @@ footer {
 }
 
 /* ============================= */
-/* SUPPORT SECTION — UNCHANGED */
+/* SUPPORT SECTION — MODIFIED */
 /* ============================= */
 
+/* Make main container wider horizontally and justify text */
 .main-container {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 1800px; /* Increased horizontal width */
+    margin: 0 auto;    /* Center container horizontally */
+    text-align: justify; /* Justify text inside container */
 }
 
 /* The Card Container with All Corners Rounded */
 .support-card {
     background-color: #ffffff;
-    max-width: 600px;
+    max-width: 700px;   /* Increased width a bit */
     width: 100%;
     padding: 30px;
-    border-left: 8px solid #ff8c00; 
-    border-radius: 12px; 
-    overflow: hidden; 
+    border-left: 8px solid var(--primary);
+    border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     font-family: "Cambria Math", serif;
     box-sizing: border-box;
+
+    /* Justify all text inside the card */
+    text-align: justify;
 }
 
 .support-title {
-    color: #ff8c00;
+    color: var(--primary);
     margin-top: 0;
     font-size: 24px;
     border-bottom: 2px solid #0a66c2;
     display: inline-block;
+    text-align: left; /* Keep title left aligned for style */
 }
 
 .support-intro {
@@ -254,7 +263,7 @@ footer {
 }
 
 .support-list a:hover {
-    color: #ff8c00;
+    color: var(--primary);
     text-decoration: underline;
 }
 
