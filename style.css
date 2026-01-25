@@ -38,17 +38,15 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: space-around; /* distribute links evenly */
-    flex-wrap: nowrap; /* prevent wrapping */
+    justify-content: center; /* center the links */
+    flex-wrap: nowrap; /* keep in one line */
     margin: 0;
     padding: 0;
     width: 100%;
 }
 
 .nav-links li {
-    margin: 0;
-    flex: 1; /* make all links take equal space */
-    text-align: center;
+    margin: 0 15px; /* gap restored */
 }
 
 .nav-links a {
@@ -60,6 +58,7 @@ body {
     padding: 10px 0;
     display: block;
     border-bottom: 2px solid transparent;
+    white-space: nowrap; /* prevent breaking */
 }
 
 .nav-links a:hover,
@@ -189,7 +188,6 @@ footer {
     h1 {
         font-size: 1.6em;
     }
-    /* Nav already spans full width, tweak font size if needed */
     .nav-links a {
         font-size: 1rem;
         padding: 12px 0;
