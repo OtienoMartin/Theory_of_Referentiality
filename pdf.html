@@ -2,117 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
+  <!-- Mobile viewport correctly set -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>PDFs</title>
 
-  <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    body {
-      font-family: "Cambria Math", Cambria, "Times New Roman", serif;
-      background: #f4f6f8;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    /* NAVBAR — MOBILE FIRST */
-    .navbar {
-      width: 100%;
-      background: #0a66c2;
-      padding: 10px 0;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-    }
-
-    .nav-links li {
-      margin: 4px 6px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-size: 0.75rem;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    /* CONTENT CONTAINERS */
-    .container {
-      background: white;
-      margin: 12px auto;
-      padding: 16px;
-      width: 95%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    header h1 {
-      font-size: 1rem;
-      margin-bottom: 6px;
-      text-align: center;
-    }
-
-    .author {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #555;
-      margin-bottom: 14px;
-    }
-
-    /* PDF BUTTON */
-    .fallback {
-      display: flex;
-      justify-content: center;
-    }
-
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #ff8c00, #e67e00);
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 25px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    .btn:active {
-      transform: scale(0.97);
-    }
-
-    /* TABLET & DESKTOP */
-    @media (min-width: 768px) {
-      .nav-links a {
-        font-size: 0.85rem;
-      }
-
-      header h1 {
-        font-size: 1.3rem;
-      }
-
-      .container {
-        max-width: 900px;
-      }
-
-      .btn {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <!-- External CSS ONLY -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -121,7 +18,7 @@
   <nav class="navbar">
     <ul class="nav-links">
       <li><a href="index.html">HOME</a></li>
-      <li><a href="pdf.html">PDFs</a></li>
+      <li><a href="pdf.html" class="active">PDFs</a></li>
       <li><a href="derivations.html">DERIVATIONS</a></li>
       <li><a href="proofs.html">PROOFS</a></li>
       <li><a href="support.html">SUPPORT</a></li>
@@ -130,65 +27,76 @@
     </ul>
   </nav>
 
-  <!-- PDF 1 -->
-  <div class="container">
-    <header>
-      <h1>
-        ON THE EXPERIMENTAL PROOF OF THE FUNDAMENTAL EQUATIONS OF THE GENERAL THEORY OF REFERENTIALITY
-      </h1>
-      <p class="author">Otieno Martin Owuor</p>
-    </header>
+  <!-- MAIN CONTENT -->
+  <main>
 
-    <div class="fallback">
-      <a
-        href="https://drive.google.com/file/d/1r-PEpbBLNtgLEvrBFklQPlXK20UtMKr2/view"
-        target="_blank"
-        class="btn"
-      >
-        Open the PDF
-      </a>
-    </div>
-  </div>
+    <!-- PDF CARD 1 -->
+    <section class="container">
+      <header>
+        <h1>
+          ON THE EXPERIMENTAL PROOF OF THE FUNDAMENTAL EQUATIONS OF THE GENERAL THEORY OF REFERENTIALITY
+        </h1>
+        <p class="author">Otieno Martin Owuor</p>
+      </header>
 
-  <!-- PDF 2 -->
-  <div class="container">
-    <header>
-      <h1>
-        GRAVITY AS A FUNCTION OF VELOCITY RATHER THAN WARPED SPACETIME CURVATURE
-      </h1>
-      <p class="author">Otieno Martin Owuor</p>
-    </header>
+      <div class="fallback">
+        <a
+          href="https://drive.google.com/file/d/1r-PEpbBLNtgLEvrBFklQPlXK20UtMKr2/view?usp=drive_link"
+          target="_blank"
+          rel="noopener"
+          class="btn"
+        >
+          Open the PDF
+        </a>
+      </div>
+    </section>
 
-    <div class="fallback">
-      <a
-        href="https://drive.google.com/file/d/1x6KH0ffgwt97Y_D6J3ilP89iCp7dBf-F/view?usp=drive_link"
-        target="_blank"
-        class="btn"
-      >
-        Open the PDF
-      </a>
-    </div>
-  </div>
+    <!-- PDF CARD 2 -->
+    <section class="container">
+      <header>
+        <h1>
+          GRAVITY AS A FUNCTION OF VELOCITY RATHER THAN WARPED SPACETIME CURVATURE
+        </h1>
+        <p class="author">Otieno Martin Owuor</p>
+      </header>
 
-  <!-- PDF 3 -->
-  <div class="container">
-    <header>
-      <h1>
-        PREDICTIONS ON MECHANICS OF COLLISION DISCREDITING AND CORRECTING THE LAW OF CONSERVATION OF LINEAR MOMENTUM
-      </h1>
-      <p class="author">Otieno Martin Owuor</p>
-    </header>
+      <div class="fallback">
+        <a
+          href="https://drive.google.com/file/d/1w3a4SK2n_8w7rWRHdKvdxMeUyXEzF37N/view?usp=drive_link"
+          target="_blank"
+          rel="noopener"
+          class="btn"
+        >
+          Open the PDF
+        </a>
+      </div>
+    </section>
 
-    <div class="fallback">
-      <a
-        href="https://drive.google.com/file/d/1XlRuZn6fwKj0gbN4OLoIIcD34DHUnxMo/view"
-        target="_blank"
-        class="btn"
-      >
-        Open the PDF
-      </a>
-    </div>
-  </div>
+    <!-- PDF CARD 3 -->
+    <section class="container">
+      <header>
+        <h1>
+          PREDICTIONS ON MECHANICS OF COLLISION DISCREDITING AND CORRECTING THE LAW OF CONSERVATION OF LINEAR MOMENTUM
+        </h1>
+        <p class="author">Otieno Martin Owuor</p>
+      </header>
+
+      <div class="fallback">
+        <a
+          href="https://drive.google.com/file/d/1XlRuZn6fwKj0gbN4OLoIIcD34DHUnxMo/view?usp=drive_link"
+          target="_blank"
+          rel="noopener"
+          class="btn"
+        >
+          Open the PDF
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- OPTIONAL JS -->
+  <script src="js.js"></script>
 
 </body>
 </html>
