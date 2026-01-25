@@ -39,7 +39,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: center; /* center the links */
-    flex-wrap: nowrap; /* keep in one line */
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -58,9 +58,19 @@ body {
     padding: 10px 0;
     display: block;
     border-bottom: 2px solid transparent;
-    white-space: nowrap; /* prevent breaking */
+    white-space: nowrap; /* prevent breaking on desktop */
 }
 
+/* Remove nowrap on smaller screens */
+@media (max-width: 768px) {
+    .nav-links a {
+        white-space: normal; /* allow wrapping on mobile */
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+/* Hover and active states */
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary);
@@ -177,21 +187,6 @@ footer {
     color: var(--gray);
     font-size: 0.9em;
     text-align: center;
-}
-
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .container {
-        margin: 10px;
-        padding: 12px;
-    }
-    h1 {
-        font-size: 1.6em;
-    }
-    .nav-links a {
-        font-size: 1rem;
-        padding: 12px 0;
-    }
 }
 
 /* ============================= */
