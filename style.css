@@ -29,20 +29,26 @@ body {
     position: sticky;
     top: 0;
     z-index: 2000;
-    width: 100%;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-around; /* distribute links evenly */
+    flex-wrap: nowrap; /* prevent wrapping */
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0;
+    flex: 1; /* make all links take equal space */
+    text-align: center;
 }
 
 .nav-links a {
@@ -51,14 +57,12 @@ body {
     font-weight: bold;
     font-size: 0.9rem;
     transition: color 0.3s;
-    padding: 5px 0;
+    padding: 10px 0;
+    display: block;
     border-bottom: 2px solid transparent;
 }
 
-.nav-links a:hover {
-    color: var(--primary);
-}
-
+.nav-links a:hover,
 .nav-links a.active {
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
@@ -185,8 +189,10 @@ footer {
     h1 {
         font-size: 1.6em;
     }
-    .nav-links li {
-        margin: 5px 10px;
+    /* Nav already spans full width, tweak font size if needed */
+    .nav-links a {
+        font-size: 1rem;
+        padding: 12px 0;
     }
 }
 
@@ -265,42 +271,7 @@ footer {
     text-decoration: underline;
 }
 
-/* NAVBAR & SUPPORT MOBILE OPTIMIZATIONS */
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.5rem 1rem;
-        width: 100vw; /* full viewport width */
-        left: 0;
-        right: 0;
-        box-sizing: border-box;
-    }
-    .nav-links {
-        flex-direction: column; /* stack vertically */
-        align-items: center;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .nav-links li {
-        margin: 8px 0; /* vertical spacing */
-        width: 100%;
-        text-align: center;
-    }
-    .nav-links a {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
-        font-size: 1.1rem;
-        border-bottom: 1px solid transparent;
-    }
-    .nav-links a.active,
-    .nav-links a:hover {
-        border-bottom: 2px solid var(--primary);
-        color: var(--primary);
-    }
-}
-
+/* Mobile optimizations for support */
 @media (max-width: 480px) {
     .main-container {
         padding: 15px 10px;
