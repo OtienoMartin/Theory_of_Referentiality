@@ -10,6 +10,74 @@
 
   <!-- External CSS ONLY -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- AUTHOR + MOBILE OPTIMIZATION -->
+  <style>
+    /* Author styling (global) */
+    .author {
+      font-family: 'Old English Text MT', 'Old English Text', serif;
+      font-weight: normal;
+      margin-top: 0.5rem;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+
+      body {
+        line-height: 1.6;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+
+      .nav-links li a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        text-align: center;
+      }
+
+      .author {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .fallback {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 0.7rem 1rem;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -62,7 +130,7 @@
 
       <div class="fallback">
         <a
-          href="https://drive.google.com/file/d/1w3a4SK2n_8w7rWRHdKvdxMeUyXEzF37N/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1x6KH0ffgwt97Y_D6J3ilP89iCp7dBf-F/view?usp=drive_link"
           target="_blank"
           rel="noopener"
           class="btn"
@@ -91,12 +159,3 @@
           Open the PDF
         </a>
       </div>
-    </section>
-
-  </main>
-
-  <!-- OPTIONAL JS -->
-  <script src="js.js"></script>
-
-</body>
-</html>
