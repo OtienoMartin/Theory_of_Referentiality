@@ -15,25 +15,30 @@
             --bg-gradient: linear-gradient(135deg, #fffcf9 0%, #f7f1eb 100%);
         }
 
-        body {
-            font-family: 'Cambria Math', 'Cambria', 'Times New Roman', serif;
+        /* Crucial for vertical centering to work on mobile browsers */
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: 'Cambria Math', 'Cambria', 'Times New Roman', serif;
             background: var(--bg-gradient);
             color: var(--text-color);
             line-height: 1.6;
-            min-height: 100vh;
+            /* 'dvh' ensures the center is correct even when mobile address bars appear/disappear */
+            min-height: 100dvh; 
             display: flex;
-            flex-direction: column; /* Allows navbar to stay top and container to fill rest */
+            flex-direction: column; 
             overflow-x: hidden; 
         }
 
         .main-container {
             display: flex;
             justify-content: center;
-            /* CHANGED: Centers the card vertically */
-            align-items: center; 
-            flex-grow: 1; /* Fills the remaining height of the screen */
+            align-items: center; /* Centers the card vertically */
+            flex-grow: 1; /* Fills the space between navbar and bottom */
             padding: 20px 15px; 
             box-sizing: border-box;
         }
@@ -49,6 +54,8 @@
             position: relative;
             overflow: hidden;
             box-sizing: border-box;
+            /* Keeps card centered if screen is very tall */
+            margin: auto 0; 
         }
 
         .support-title {
@@ -142,12 +149,12 @@
         /* MOBILE OPTIMIZATIONS */
         @media (max-width: 600px) {
             .main-container {
-                /* Ensures card isn't squashed against the navbar on short screens */
                 padding: 10px 10px; 
                 align-items: center; 
             }
             .support-card {
                 padding: 15px 15px 20px 15px;
+                margin: auto 0;
             }
             .support-title {
                 font-size: 1.6rem;
