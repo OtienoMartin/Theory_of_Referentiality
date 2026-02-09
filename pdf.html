@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
-  <!-- Mobile viewport correctly set -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>PDFs</title>
 
-  <!-- External CSS ONLY -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- AUTHOR + MOBILE OPTIMIZATION -->
   <style>
     /* Author styling (global) */
     .author {
       font-family: 'Old English Text MT', 'Old English Text', serif;
       font-weight: normal;
       margin-top: 0.5rem;
+      text-align: center; /* Center align author globally */
+    }
+
+    /* Header styling (global) */
+    h1 {
+      text-align: center; /* Center align h1 globally */
+      font-family: "Cambria Math", serif;
     }
 
     /* Mobile optimizations */
@@ -54,12 +57,12 @@
       h1 {
         font-size: 1.1rem;
         line-height: 1.4;
-        text-align: center;
+        text-align: center; /* Explicitly centered for mobile */
       }
 
       .author {
         font-size: 1rem;
-        text-align: center;
+        text-align: center; /* Explicitly centered for mobile */
       }
 
       .fallback {
@@ -81,7 +84,6 @@
 
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="navbar">
     <ul class="nav-links">
       <li><a href="index.html">HOME</a></li>
@@ -94,10 +96,8 @@
     </ul>
   </nav>
 
-  <!-- MAIN CONTENT -->
   <main>
 
-    <!-- PDF CARD 1 -->
     <section class="container">
       <header>
         <h1>
@@ -107,18 +107,12 @@
       </header>
 
       <div class="fallback">
-        <a
-          href="https://drive.google.com/file/d/1OmW5KxPgLdJG34o5vdrzUmJR8oDdBwnL/view?usp=drive_link"
-          target="_blank"
-          rel="noopener"
-          class="btn"
-        >
+        <a href="https://drive.google.com/file/d/1OmW5KxPgLdJG34o5vdrzUmJR8oDdBwnL/view?usp=drive_link" target="_blank" rel="noopener" class="btn">
           Open the PDF
         </a>
       </div>
     </section>
 
-    <!-- PDF CARD 2 -->
     <section class="container">
       <header>
         <h1>
@@ -128,18 +122,12 @@
       </header>
 
       <div class="fallback">
-        <a
-          href="https://drive.google.com/file/d/1x6KH0ffgwt97Y_D6J3ilP89iCp7dBf-F/view?usp=drive_link"
-          target="_blank"
-          rel="noopener"
-          class="btn"
-        >
+        <a href="https://drive.google.com/file/d/1x6KH0ffgwt97Y_D6J3ilP89iCp7dBf-F/view?usp=drive_link" target="_blank" rel="noopener" class="btn">
           Open the PDF
         </a>
       </div>
     </section>
 
-    <!-- PDF CARD 3 -->
     <section class="container">
       <header>
         <h1>
@@ -149,19 +137,13 @@
       </header>
 
       <div class="fallback">
-        <a
-          href="https://drive.google.com/file/d/1XlRuZn6fwKj0gbN4OLoIIcD34DHUnxMo/view?usp=drive_link"
-          target="_blank"
-          rel="noopener"
-          class="btn"
-        >
+        <a href="https://drive.google.com/file/d/1XlRuZn6fwKj0gbN4OLoIIcD34DHUnxMo/view?usp=drive_link" target="_blank" rel="noopener" class="btn">
           Open the PDF
         </a>
       </div>
     </section>
 	
-	<!-- PDF CARD 4 -->
-    <section class="container">
+	<section class="container">
       <header>
         <h1>
           A PREDICTION RELATING ACTION AND REACTION FORCES TO REFUTE AND PROVIDE A CORRECTION FOR NEWTON’S THIRD LAW OF MOTION 
@@ -170,19 +152,13 @@
       </header>
 
       <div class="fallback">
-        <a
-          href="https://drive.google.com/file/d/15qvAxDncTKMHn59AAuYGinOqVczgnmVf/view?usp=drive_link"
-          target="_blank"
-          rel="noopener"
-          class="btn"
-        >
+        <a href="https://drive.google.com/file/d/15qvAxDncTKMHn59AAuYGinOqVczgnmVf/view?usp=drive_link" target="_blank" rel="noopener" class="btn">
           Open the PDF
         </a>
       </div>
     </section>
 	
-	<!-- PDF CARD 5 -->
-    <section class="container">
+	<section class="container">
       <header>
         <h1>
           DO PHOTOELECTRIC EFFECT AND ELECTROMAGNETIC RADIATION CONFORM TO THE EQUATIONS THAT WON ALBERT EINSTEIN THE 1921 NOBEL PRIZE?
@@ -191,19 +167,13 @@
       </header>
 
       <div class="fallback">
-        <a
-          href="https://drive.google.com/file/d/1-fuXcflVO4JYJNC-Qs63L_fajyu_o8Rs/view?usp=drive_link"
-          target="_blank"
-          rel="noopener"
-          class="btn"
-        >
+        <a href="https://drive.google.com/file/d/1-fuXcflVO4JYJNC-Qs63L_fajyu_o8Rs/view?usp=drive_link" target="_blank" rel="noopener" class="btn">
           Open the PDF
         </a>
       </div>
     </section>
 	
-	<!-- PDF CARD 5 -->
-    <section class="container">
+	<section class="container">
       <header>
         <h1>
           QUANTUM MECHANICS AND ELECTROMAGNETISM AS ACCOUNTED FOR BY THE GENERAL THEORY OF REFERENTIALITY
@@ -212,20 +182,13 @@
       </header>
 
       <div class="fallback">
-        <a
-          href="https://drive.google.com/file/d/15gXIS8DVjv-BHqc_z_S7ZUXo6-8XHY4D/view?usp=drive_link"
-          target="_blank"
-          rel="noopener"
-          class="btn"
-        >
+        <a href="https://drive.google.com/file/d/15gXIS8DVjv-BHqc_z_S7ZUXo6-8XHY4D/view?usp=drive_link" target="_blank" rel="noopener" class="btn">
           Open the PDF
         </a>
       </div>
     </section>
 	
-	
-	<!-- PDF CARD 5 -->
-    <section class="container">
+	<section class="container">
       <header>
         <h1>
           WEAK FORCE AS ACCOUNTED FOR BY THE GENERAL THEORY OF REFERENTIALITY
@@ -234,12 +197,7 @@
       </header>
 
       <div class="fallback">
-        <a
-          href="https://drive.google.com/file/d/1GQUYk1FBVlnQX9QxRqOsaV-9a6T_Iq2y/view?usp=drive_link"
-          target="_blank"
-          rel="noopener"
-          class="btn"
-        >
+        <a href="https://drive.google.com/file/d/1GQUYk1FBVlnQX9QxRqOsaV-9a6T_Iq2y/view?usp=drive_link" target="_blank" rel="noopener" class="btn">
           Open the PDF
         </a>
       </div>
