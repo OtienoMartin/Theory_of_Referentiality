@@ -21,135 +21,138 @@
             padding: 0;
             background: var(--bg-gradient);
             color: var(--text-color);
-            line-height: 1.8;
+            line-height: 1.6;
             min-height: 100vh;
+            overflow-x: hidden; 
         }
 
         .main-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 60px 20px;
+            align-items: flex-start;
+            padding: 5px 15px; 
         }
 
         .support-card {
             background: #ffffff;
             max-width: 850px;
             width: 100%;
-            padding: 50px;
+            padding: 10px 40px 30px 40px;
+            margin-top: 5px; 
             border-radius: 20px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
             border-top: 8px solid var(--accent-orange);
             position: relative;
             overflow: hidden;
-        }
-
-        /* Subtle mathematical watermark effect */
-        .support-card::before {
-            content: "∑ ∫ Δ φ";
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            font-size: 5rem;
-            color: rgba(255, 140, 0, 0.03);
-            font-weight: bold;
-            pointer-events: none;
+            box-sizing: border-box;
         }
 
         .support-title {
             color: var(--dark-blue);
             font-size: 2.2rem;
-            margin-top: 0;
-            margin-bottom: 20px;
+            margin-top: 0; 
+            margin-bottom: 10px;
             text-align: center;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
         }
 
         .support-intro {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--accent-orange);
             font-weight: bold;
             text-align: center;
-            margin-bottom: 40px;
+            margin-top: 0;
+            margin-bottom: 15px; 
         }
 
         .support-list {
             list-style: none;
             counter-reset: support-counter;
             padding: 0;
+            margin: 0;
         }
 
         .support-list li {
             counter-increment: support-counter;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: #fafafa;
-            border-radius: 12px;
-            position: relative;
-            padding-left: 70px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 12px;
+            padding: 15px 20px 15px 60px;
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 10px;
+            position: relative; /* Essential for the stretched link */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             text-align: justify;
+            overflow-wrap: break-word;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
+        /* Hover effect for the whole div */
         .support-list li:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(255, 140, 0, 0.15);
-            background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: var(--accent-orange);
         }
 
-        /* Number circles */
         .support-list li::before {
             content: counter(support-counter);
             position: absolute;
-            left: 20px;
+            left: 15px;
             top: 50%;
             transform: translateY(-50%);
             background: var(--accent-orange);
             color: white;
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
+            z-index: 2; /* Keeps number above the invisible link */
         }
 
         .support-list li a {
             color: var(--dark-blue);
             text-decoration: none;
             font-weight: bold;
-            border-bottom: 2px dotted var(--accent-orange);
-            transition: 0.3s;
+            border-bottom: 1px dotted var(--accent-orange);
+            transition: color 0.2s ease;
         }
 
-        .support-list li a:hover {
+        /* This creates the clickable area for the whole LI */
+        .support-list li a::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .support-list li:hover a {
             color: var(--accent-orange);
-            background: rgba(255, 140, 0, 0.05);
         }
 
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
+        /* MOBILE OPTIMIZATIONS */
+        @media (max-width: 600px) {
             .support-card {
-                padding: 30px 20px;
+                padding: 10px 15px 20px 15px;
             }
-
             .support-title {
                 font-size: 1.6rem;
             }
-
             .support-list li {
-                padding-left: 20px;
-                padding-top: 55px;
-                text-align: left;
+                padding: 12px 12px 12px 45px; 
+                font-size: 0.95rem;
             }
-
             .support-list li::before {
-                top: 20px;
-                transform: none;
-                left: 20px;
+                width: 25px;
+                height: 25px;
+                left: 10px;
             }
         }
     </style>
@@ -170,7 +173,6 @@
     <div class="main-container">
         <div class="support-card">
             <h2 class="support-title">Support This Mission</h2>
-            
             <p class="support-intro">You can support this work through the following avenues:</p>
 
             <ol class="support-list">
@@ -180,8 +182,7 @@
                 </li>
                 <li>
                     Utilizing your laboratory or specialized equipment to conduct the experiments described in my 
-                    <a href="pdf.html">Research PDFs</a>. 
-                    I invite you to publish your findings and allow me to reference your data in my research papers.
+                    <a href="pdf.html">Research PDFs</a>. I invite you to publish your findings and allow me to reference your data in my research papers.
                 </li>
                 <li>
                     Your support will also help me perfect this new revolutionary 
