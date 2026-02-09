@@ -1,45 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width'>
-    <title>Privacy Policy - Theory of Referentiality</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Privacy Policy - Referentiality</title>
     <style> 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 2em; line-height: 1.6; color: #333; max-width: 800px; margin: auto; }
-        h1 { color: #ff8c00; border-left: 5px solid #0a66c2; padding-left: 10px; }
-        h2 { color: #0a66c2; margin-top: 1.5em; }
-        strong { color: #000; }
-        .update-date { font-style: italic; color: #666; }
+        /* Global Styles */
+        body { 
+            font-family: 'Cambria Math', 'Cambria', 'Times New Roman', serif; 
+            padding: 40px 20px; 
+            line-height: 1.8; 
+            color: #2c3e50; 
+            max-width: 850px; 
+            margin: auto; 
+            background: linear-gradient(to bottom, #fdfcfb 0%, #e2d1c3 100%);
+            background-attachment: fixed;
+            overflow-x: hidden; 
+        }
+
+        /* Container Card */
+        .policy-card {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Header Styling */
+        h1 { 
+            color: #ff8c00; 
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
+            border-bottom: 3px solid #ff8c00;
+            display: inline-block;
+            padding-right: 50px;
+        }
+
+        h2 { 
+            color: #0d47a1; 
+            margin-top: 1.8em; 
+            font-size: 1.4em;
+            border-left: 4px solid #ff8c00;
+            padding-left: 15px;
+            background: rgba(255, 140, 0, 0.05);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        /* Text Alignment & Justification */
+        p { 
+            text-align: justify; 
+            margin-bottom: 1.2em;
+            overflow-wrap: break-word; 
+        }
+
+        ul { padding-left: 20px; }
+
+        li {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        strong { color: #1a1a1a; }
+
+        .update-date { 
+            font-style: italic; 
+            color: #7f8c8d; 
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        /* Link Styling */
+        a {
+            color: #0d47a1; /* Scientific Blue */
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+            word-break: break-all;
+        }
+
+        a:hover {
+            color: #ff8c00;
+            border-bottom: 1px solid #ff8c00;
+        }
+
+        /* Specifically for the Contact Email */
+        .email-link {
+            color: #007bff !important; /* Bright Blue */
+            text-decoration: underline;
+        }
+
+        /* Contact Section Highlight */
+        .contact-box {
+            background: #fdf2e9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ff8c00;
+            margin-top: 30px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .policy-card { padding: 25px 15px; border-radius: 8px; }
+            h1 { font-size: 1.6em; padding-right: 10px; display: block; }
+            h2 { font-size: 1.2em; margin-top: 1.4em; }
+            p, li { text-align: left; font-size: 1rem; line-height: 1.6; }
+            .contact-box { padding: 15px; }
+            .contact-box h2 { margin-top: 0; }
+        }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="update-date">Last Updated: February 2026</p>
-    
-    <p>This Privacy Policy describes how your personal information is handled in the <strong>Theory of Referentiality</strong> mobile application.</p>
 
-    <h2>1. Data Collection and Usage</h2>
-    <p>While the app itself does not require a user account or manual input of personal data (such as names or emails), it does utilize automated data collection tools via third-party SDKs to function effectively.</p>
-    <ul>
-        <li><strong>Device Identifiers:</strong> We may collect and transmit Device IDs or Advertising IDs (such as the Google Advertising ID) to facilitate advertising and analytics.</li>
-        <li><strong>App Performance Data:</strong> We may collect diagnostic information, such as crash logs and app performance metrics, to improve user experience.</li>
-    </ul>
+    <div class="policy-card">
+        <h1>Privacy Policy</h1>
+        <span class="update-date">Last Updated: February 2026</span>
+        
+        <p>This Privacy Policy describes how your personal information is handled in the <strong>Referentiality</strong> mobile application. We are committed to maintaining the highest standards of data integrity and transparency.</p>
 
-    <h2>2. Third-Party Services & Data Sharing</h2>
-    <p>To provide monetization and support, this app shares specific data with the following third parties:</p>
-    <p><strong>Google AdMob:</strong> Used for advertisements. AdMob may collect and use data such as your IP address, device identifiers, and approximate location (at the city level) to serve relevant ads. For more information, please visit: 
-    <a href="https://policies.google.com/privacy" target="_blank">Google Privacy & Terms</a>.</p>
+        <h2>1. Data Collection and Usage</h2>
+        <p>While the app itself does not require a user account or manual input of personal data, it does utilize automated data collection tools via third-party SDKs to function effectively.</p>
+        <ul>
+            <li><strong>Device Identifiers:</strong> We may collect and transmit Device IDs or Advertising IDs to facilitate advertising and analytics.</li>
+            <li><strong>App Performance Data:</strong> We may collect diagnostic information, such as crash logs, to improve user experience.</li>
+        </ul>
 
-    <h2>3. Data Encryption and Security</h2>
-    <p>We value your trust in providing us your information. All data transmitted off the device by our third-party partners is handled via <strong>encrypted protocols (HTTPS)</strong> to ensure security during transit.</p>
+        <h2>2. Third-Party Services & Data Sharing</h2>
+        <p>To provide monetization and support, this app shares specific data with the following third parties:</p>
+        <p><strong>Google AdMob:</strong> AdMob may collect data such as your IP address and device identifiers to serve relevant ads. For more information, please visit: 
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy & Terms</a>.</p>
 
-    <h2>4. Children’s Privacy</h2>
-    <p>This app is <strong>not</strong> specifically designed for children under 13. We do not knowingly collect personally identifiable information from children under 13. If we discover a child under 13 has provided us with personal information, we immediately delete this from our servers.</p>
+        <h2>3. Data Encryption and Security</h2>
+        <p>All data transmitted off the device by our third-party partners is handled via <strong>encrypted protocols (HTTPS)</strong> to ensure security during transit.</p>
 
-    <h2>5. Changes to This Policy</h2>
-    <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. These changes are effective immediately after they are posted on this page.</p>
+        <h2>4. Children’s Privacy</h2>
+        <p>This app is <strong>not</strong> specifically designed for children under 13. If we discover a child under 13 has provided us with personal information, we immediately delete this from our servers.</p>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, contact us at: <strong>referentiality@gmail.com</strong></p>
+        <h2>5. Changes to This Policy</h2>
+        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.</p>
+
+        <div class="contact-box">
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions or suggestions, please reach out to us at: <br>
+            <a href="mailto:referentiality@gmail.com" class="email-link"><strong>referentiality@gmail.com</strong></a></p>
+        </div>
+    </div>
+
 </body>
 </html>
