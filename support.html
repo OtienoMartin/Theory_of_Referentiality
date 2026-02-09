@@ -23,14 +23,19 @@
             color: var(--text-color);
             line-height: 1.6;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column; /* Allows navbar to stay top and container to fill rest */
             overflow-x: hidden; 
         }
 
         .main-container {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            padding: 5px 15px; 
+            /* CHANGED: Centers the card vertically */
+            align-items: center; 
+            flex-grow: 1; /* Fills the remaining height of the screen */
+            padding: 20px 15px; 
+            box-sizing: border-box;
         }
 
         .support-card {
@@ -38,7 +43,6 @@
             max-width: 850px;
             width: 100%;
             padding: 10px 40px 30px 40px;
-            margin-top: 5px; 
             border-radius: 20px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
             border-top: 8px solid var(--accent-orange);
@@ -80,7 +84,7 @@
             background: #ffffff;
             border: 1px solid #eaeaea;
             border-radius: 10px;
-            position: relative; /* Essential for the stretched link */
+            position: relative;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             text-align: justify;
             overflow-wrap: break-word;
@@ -88,7 +92,6 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        /* Hover effect for the whole div */
         .support-list li:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -111,7 +114,7 @@
             justify-content: center;
             font-weight: bold;
             font-size: 0.9rem;
-            z-index: 2; /* Keeps number above the invisible link */
+            z-index: 2;
         }
 
         .support-list li a {
@@ -122,7 +125,6 @@
             transition: color 0.2s ease;
         }
 
-        /* This creates the clickable area for the whole LI */
         .support-list li a::after {
             content: "";
             position: absolute;
@@ -139,8 +141,13 @@
 
         /* MOBILE OPTIMIZATIONS */
         @media (max-width: 600px) {
+            .main-container {
+                /* Ensures card isn't squashed against the navbar on short screens */
+                padding: 10px 10px; 
+                align-items: center; 
+            }
             .support-card {
-                padding: 10px 15px 20px 15px;
+                padding: 15px 15px 20px 15px;
             }
             .support-title {
                 font-size: 1.6rem;
