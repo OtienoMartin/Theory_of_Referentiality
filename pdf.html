@@ -9,9 +9,13 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Spacing to ensure the first container is fully displayed below the navbar */
+    /* Structural layout to ensure the first container is 
+       fully displayed below the fixed navbar 
+    */
     main {
-      padding-top: 80px; 
+      display: block;
+      padding-top: 100px; /* Clearance for the navbar */
+      padding-bottom: 3rem;
     }
 
     /* Author styling (global) */
@@ -19,70 +23,58 @@
       font-family: 'Old English Text MT', 'Old English Text', serif;
       font-weight: normal;
       margin-top: 0.5rem;
-      text-align: center; /* Center align author globally */
+      text-align: center;
     }
 
     /* Header styling (global) */
     h1 {
-      text-align: center; /* Center align h1 globally */
+      text-align: center;
       font-family: "Cambria Math", serif;
+      margin-bottom: 1rem;
     }
 
-    /* Mobile optimizations */
+    /* Local Container Styling - Inheriting variables from your style.css */
+    .container {
+      width: 95%;
+      max-width: 860px;
+      margin: 0 auto 2rem;
+      padding: 2rem 1.5rem;
+      background: var(--card, #fffef9);
+      border-radius: 1rem;
+      box-shadow: var(--shadow, 0 16px 48px rgba(0,0,0,0.09));
+    }
+
+    .fallback {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    /* Mobile adjustments for content containers only */
     @media (max-width: 768px) {
-      body {
-        line-height: 1.6;
-      }
-
-      .navbar {
-        padding: 0.5rem 0;
-      }
-
-      .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-      }
-
-      .nav-links li a {
-        padding: 0.4rem 0.6rem;
-        font-size: 0.85rem;
-      }
-
       main {
-        padding: 1rem;
-        padding-top: 120px; /* Extra padding for mobile nav wrapping */
+        padding-top: 140px; /* Extra room for wrapped nav links on small screens */
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
 
       .container {
-        padding: 1rem;
-        margin-bottom: 1.5rem;
+        padding: 1.5rem 1rem;
       }
 
       h1 {
         font-size: 1.1rem;
         line-height: 1.4;
-        text-align: center; /* Explicitly centered for mobile */
       }
 
       .author {
         font-size: 1rem;
-        text-align: center; /* Explicitly centered for mobile */
-      }
-
-      .fallback {
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
       }
 
       .btn {
         width: 100%;
         max-width: 280px;
         text-align: center;
-        padding: 0.7rem 1rem;
-        font-size: 0.95rem;
       }
     }
   </style>
@@ -103,7 +95,6 @@
   </nav>
 
   <main>
-
     <section class="container">
       <header>
         <h1>
@@ -149,7 +140,7 @@
       </div>
     </section>
 	
-	<section class="container">
+    <section class="container">
       <header>
         <h1>
           A PREDICTION RELATING ACTION AND REACTION FORCES TO REFUTE AND PROVIDE A CORRECTION FOR NEWTON’S THIRD LAW OF MOTION 
@@ -164,7 +155,7 @@
       </div>
     </section>
 	
-	<section class="container">
+    <section class="container">
       <header>
         <h1>
           DO PHOTOELECTRIC EFFECT AND ELECTROMAGNETIC RADIATION CONFORM TO THE EQUATIONS THAT WON ALBERT EINSTEIN THE 1921 NOBEL PRIZE?
@@ -179,7 +170,7 @@
       </div>
     </section>
 	
-	<section class="container">
+    <section class="container">
       <header>
         <h1>
           QUANTUM MECHANICS AND ELECTROMAGNETISM AS ACCOUNTED FOR BY THE GENERAL THEORY OF REFERENTIALITY
@@ -194,7 +185,7 @@
       </div>
     </section>
 	
-	<section class="container">
+    <section class="container">
       <header>
         <h1>
           WEAK FORCE AS ACCOUNTED FOR BY THE GENERAL THEORY OF REFERENTIALITY
