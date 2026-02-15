@@ -33,16 +33,21 @@
       margin-bottom: 1rem;
     }
 
-    /* Local Container Styling - Inheriting variables from your style.css */
+    /* Local Container Styling */
     .container {
-      width: 95%;
+      /* width and margin auto ensure equal side gaps */
+      width: 90%; 
       max-width: 860px;
-      margin: 0 auto 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      
       padding: 2rem 1.5rem;
       background: var(--card, #fffef9);
       border-radius: 1rem;
       box-shadow: var(--shadow, 0 16px 48px rgba(0,0,0,0.09));
-      box-sizing: border-box; /* Ensures padding doesn't affect width */
+      box-sizing: border-box; 
     }
 
     .fallback {
@@ -54,13 +59,15 @@
     /* Mobile adjustments */
     @media (max-width: 768px) {
       main {
-        padding-top: 140px; /* Extra room for wrapped nav links on small screens */
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-top: 140px; 
+        /* Removed horizontal padding from main to let container define the gap */
+        padding-left: 0;
+        padding-right: 0;
       }
 
       .container {
-        width: 100%; /* Take full width on mobile */
+        /* This ensures a consistent equal gap on small mobile screens */
+        width: 92%; 
         padding: 1.5rem 1rem;
         margin-bottom: 1.5rem;
       }
@@ -68,7 +75,7 @@
       h1 {
         font-size: 1.1rem;
         line-height: 1.4;
-        word-wrap: break-word; /* Prevents long words from breaking layout */
+        word-wrap: break-word; 
       }
 
       .author {
