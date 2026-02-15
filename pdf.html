@@ -42,6 +42,7 @@
       background: var(--card, #fffef9);
       border-radius: 1rem;
       box-shadow: var(--shadow, 0 16px 48px rgba(0,0,0,0.09));
+      box-sizing: border-box; /* Ensures padding doesn't affect width */
     }
 
     .fallback {
@@ -50,7 +51,7 @@
       margin-top: 1.5rem;
     }
 
-    /* Mobile adjustments for content containers only */
+    /* Mobile adjustments */
     @media (max-width: 768px) {
       main {
         padding-top: 140px; /* Extra room for wrapped nav links on small screens */
@@ -59,12 +60,15 @@
       }
 
       .container {
+        width: 100%; /* Take full width on mobile */
         padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
       }
 
       h1 {
         font-size: 1.1rem;
         line-height: 1.4;
+        word-wrap: break-word; /* Prevents long words from breaking layout */
       }
 
       .author {
@@ -72,9 +76,11 @@
       }
 
       .btn {
+        display: inline-block;
         width: 100%;
         max-width: 280px;
         text-align: center;
+        box-sizing: border-box;
       }
     }
   </style>
