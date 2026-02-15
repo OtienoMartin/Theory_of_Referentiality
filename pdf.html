@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Structural layout to ensure the first container is 
-       fully displayed below the fixed navbar 
-    */
+    /* Structural layout */
     main {
       display: block;
       padding-top: 100px; /* Clearance for the navbar */
       padding-bottom: 3rem;
+      /* Ensures horizontal gaps are perfectly balanced */
+      padding-left: 5%;
+      padding-right: 5%;
     }
 
     /* Author styling (global) */
@@ -35,19 +36,15 @@
 
     /* Local Container Styling */
     .container {
-      /* width and margin auto ensure equal side gaps */
-      width: 90%; 
+      width: 100%;
       max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0;
-      margin-bottom: 2rem;
-      
-      padding: 2rem 1.5rem;
+      /* margin auto centers the container within the 90% width of main */
+      margin: 0 auto 2rem auto; 
+      padding: 2.5rem 1.5rem;
       background: var(--card, #fffef9);
       border-radius: 1rem;
       box-shadow: var(--shadow, 0 16px 48px rgba(0,0,0,0.09));
-      box-sizing: border-box; 
+      box-sizing: border-box;
     }
 
     .fallback {
@@ -60,14 +57,12 @@
     @media (max-width: 768px) {
       main {
         padding-top: 140px; 
-        /* Removed horizontal padding from main to let container define the gap */
-        padding-left: 0;
-        padding-right: 0;
+        /* Uniform small gap on mobile edges */
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
 
       .container {
-        /* This ensures a consistent equal gap on small mobile screens */
-        width: 92%; 
         padding: 1.5rem 1rem;
         margin-bottom: 1.5rem;
       }
@@ -75,7 +70,7 @@
       h1 {
         font-size: 1.1rem;
         line-height: 1.4;
-        word-wrap: break-word; 
+        word-wrap: break-word;
       }
 
       .author {
