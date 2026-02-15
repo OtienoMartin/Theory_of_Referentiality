@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
+    /* Spacing for the main content to clear the fixed navbar */
+    main {
+      display: block;
+      padding-top: 100px; /* Adjust this value to increase/decrease the gap */
+      padding-bottom: 2rem;
+    }
+
     /* Author styling (global) */
     .author {
       font-family: 'Old English Text MT', 'Old English Text', serif;
@@ -23,10 +30,26 @@
       font-family: "Cambria Math", serif;
     }
 
+    .container {
+      width: 95%;
+      max-width: 860px;
+      margin: 0 auto 2rem;
+      padding: 2rem 1.5rem;
+      background: var(--card, #fffef9);
+      border-radius: 1rem;
+      box-shadow: var(--shadow, 0 16px 48px rgba(0,0,0,0.09));
+    }
+
     /* Mobile optimizations */
     @media (max-width: 768px) {
       body {
         line-height: 1.6;
+      }
+
+      main {
+        padding-top: 140px; /* Larger gap for mobile as nav-links might wrap */
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
 
       .navbar {
@@ -43,10 +66,6 @@
       .nav-links li a {
         padding: 0.4rem 0.6rem;
         font-size: 0.85rem;
-      }
-
-      main {
-        padding: 1rem;
       }
 
       .container {

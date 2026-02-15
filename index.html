@@ -1,25 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The General Theory of Referentiality</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<link rel="stylesheet" href="style.css" />
+
+<style>
+:root {
+  --bg: #fffaf5; --text: #2d1a0f; --accent-light: #ff8c00; --accent-dark: #e67e00;
+  --gradient: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+  --card: #fffef9; --shadow: 0 16px 48px rgba(0,0,0,0.09), 0 4px 16px rgba(0,0,0,0.06);
+}
+[data-theme="dark"] {
+  --bg: #000; --text: #f8f1e9; --accent-light: #ffa500; --accent-dark: #cc7a00;
+  --card: #0a0a0a; --shadow: 0 20px 60px rgba(0,0,0,0.60), 0 8px 24px rgba(0,0,0,0.45);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Cambria Math', Cambria, Georgia, 'Times New Roman', serif;
+  background-color:var(--bg); color:var(--text); line-height:1.6;
+  min-height:100vh; transition:background-color 0.45s, color 0.45s;
+  cursor:default; user-select:none; -webkit-user-select:none;
+  padding-top:70px; /* space for navbar */
+}
+
+/* Page header (h1) */
+.page-title {
+  position: sticky;
+  top:70px; /* below navbar */
+  background: var(--gradient);
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* App download static container */
+#app-download {
+  position:fixed; 
+  top:155px; /* Balanced gap between h1 and this container */
+  left:50%; 
+  transform:translateX(-50%);
+  background:var(--card); 
+  padding:0.8rem 1.5rem; 
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2); 
+  z-index:999;
+  text-align:center; 
+  display:flex; 
+  align-items:center; 
+  gap:1.2rem;
+  display: none; 
+}
+#app-download p{margin:0; font-size:1rem; color:var(--text);}
+
+/* Play Store Logo Size */
+#app-download img:not(.qr-code) {
+  width:160px; max-width:95%; height:auto; border-radius:8px;
+}
+
+/* QR Code styling */
+.qr-code {
+  width: 80px !important; 
+  height: 80px !important;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Layout */
+.container{
+  width:95%; max-width:860px; 
+  /* Reduced margin to match the top gap exactly */
+  margin:240px auto 3rem; 
+  padding:2rem 1.5rem; 
+  background:var(--card); border-radius:1rem; box-shadow:var(--shadow);
+}
+.content{font-size:1rem; text-align:justify;}
+.content p{margin-bottom:1rem;}
+.highlight{color:var(--accent-dark);font-weight:600;}
+h2{margin:1.5rem 0 0.8rem; color:var(--accent-dark); font-size:1.3rem;}
+h3{margin:1rem 0 0.5rem; font-size:1.1rem;}
+ol,ul{margin-left:1.5rem;margin-bottom:1rem;}
+li{margin-bottom:0.3rem;}
+
+/* Utilities */
+#offline-screen{position:fixed;inset:0;background:#111;color:#eee;display:none;
+flex-direction:column;align-items:center;justify-content:center;z-index:9999;}
+#main-content{display:block;}
+
+/* TTS highlight */
+.word{transition:background-color 0.1s; border-radius:3px; padding:0 2px;}
+.word.active{background-color: var(--accent-light); color: #000 !important;}
+
+/* Mobile adjustments */
+@media (max-width:640px){
+  .page-title{font-size:1.3rem;}
+  .container{padding:1.5rem 1rem; margin-top:2rem !important;}
+  .content{font-size:0.95rem;}
+  h2{font-size:1.2rem;}
+  h3{font-size:1rem;}
+  ol, ul{margin-left:1.2rem;}
+}
+</style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="pdf.html">PDFs</a></li>
-            <li><a href="derivations.html">DERIVATIONS</a></li>
-            <li><a href="proofs.html">PROOFS</a></li>
-            <li><a href="support.html">SUPPORT</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
-			<li><a href="services.html">OUR SERVICES</a></li>
-        </ul>
-    </nav>
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="pdf.html">PDFs</a></li>
+        <li><a href="derivations.html">DERIVATIONS</a></li>
+        <li><a href="proofs.html">PROOFS</a></li>
+        <li><a href="support.html">SUPPORT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="services.html">OUR SERVICES</a></li>
+    </ul>
+</nav>
 
-    <script src="js.js"></script>
+<h1 class="page-title">The General Theory of Referentiality</h1>
+
+<div id="app-download">
+  <p>For more about the theory, download the app:</p>
+  <a href="https://play.google.com/store/apps/details?id=referentiality.aplicafw&pcampaignid=web_share" target="_blank">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+  </a>
+  <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=referentiality.aplicafw" alt="Scan to download">
+</div>
+
+<div id="offline-screen">
+  <div style="font-size:5rem;">📴</div>
+  <div style="font-size:1.4rem;">Check your internet connection.</div>
+</div>
+
+<div id="main-content">
+  <div class="container">
+    <div class="content">
+      <p>Hello, I am Martin Owuor, and I want to introduce you to the General Theory of Referentiality. The Theory of Referentiality is my version of the Theory of Everything. In this theory, I capture all four fundamental forces in a single neat equation that is less than half an inch long.</p>
+      <h2>A Quick Recap of the Fundamental Forces</h2>
+      <p>They are:</p>
+      <ol>
+        <li>Gravitational Force</li>
+        <li>Electromagnetic Force</li>
+        <li>Weak Nuclear Force</li>
+        <li>Strong Nuclear Force</li>
+      </ol>
+      <h3>1. Gravitational Force</h3>
+      <p>Gravity is the force by which masses attract each other, acting over long distances. It is the weakest of the four fundamental forces, but always attractive.</p>
+      <p><strong>Why does gravity matter?</strong></p>
+      <p>Gravity governs the motion of planets in their orbits around the sun, as well as the motion of stars and galaxies. It gives objects weight and keeps the universe structurally organized.</p>
+      <h3>2. Electromagnetic Force</h3>
+      <p>The Electromagnetic Force acts between electrically charged particles and includes both electric and magnetic effects. It can be attractive or repulsive and has infinite range.</p>
+      <p><strong>Why does electromagnetic force matter?</strong></p>
+      <p>It holds atoms and molecules together, enabling chemistry and life, and also governs electricity, magnetism, light, and modern technology.</p>
+      <h3>3. Weak Nuclear Force</h3>
+      <p>It is also known as the Weak Force or Weak Interaction. The Weak Nuclear Force is responsible for processes that change one type of particle into another, such as beta decay. It acts over very short distances and is weaker than the strong nuclear force.</p>
+      <p><strong>Why does weak nuclear force matter?</strong></p>
+      <p>It enables radioactive decay and the nuclear reaction in stars. This force is essential for the formation of elements and energy production in the universe.</p>
+      <h3>4. Strong Nuclear Force</h3>
+      <p>It is also known as Strong Force or Strong Interaction. The Strong Nuclear Force binds quarks together to form protons and neutrons and holds these particles inside atomic nuclei. It is the strongest fundamental force but acts over extremely short distances.</p>
+      <p><strong>Why does strong force matter?</strong></p>
+      <p>It stabilizes atomic nuclei, allowing matter to exist. Without it, atoms and hence all physical structures would fall apart.</p>
+      <p>Conventionally, it is said that the Theory of Everything is an equation or equation set that unifies both Quantum Mechanics and Einstein's General Relativity into a single framework.</p>
+      <p>I should state categorically that my aim is not to unify Quantum Mechanics and General Relativity, for there have already been several attempts by established physicists that are better equipped in terms of human and experimental resources. Unfortunately, all these attempts have been futile. I have developed the General Theory Referentiality from scratch beginning with Classical Mechanics.</p>
+      <p>The term “Referentiality” is derived from the word “reference.” A meaningful definition of the Theory of Referentiality will come out if I put the theory side by side with Einstein's General Relativity Theory.</p>
+      <p>You see, in Relativity, there have to be two different observers, and both of them must agree on what is simultaneous. It implies that if there is no simultaneity, there is no Theory of Relativity. However, in Referentiality, displacements, time, etc., are measured from a specified point of reference. In case different observers do not agree on a common reference point, each one of them can have their own point of reference. Theory of Referentiality states that even when observers have different points of reference, their results will be identical.</p>
+      <p>It means that for all possible universes or multiverses that exist out there, Theory of Referentiality can account for all of them using just one equation. Even here on Earth, we can account for different contexts using the same equation, as we shall see later on.</p>
+      <p>Then there is the word “General” attached to the theory, to read the General Theory of Referentiality. Now, I am a huge admirer of Albert Einstein, and those who know me can tell that I have referred to myself and I consider myself as the next Albert Einstein on a humble scale though. On the day he died, media reported about work Einstein could never complete, so I step in to complete the work. I lifted the term general from Einstein's work, The General Theory of Relativity. The word general also reflects the broader scope of my work.</p>
+      <p>As I sign out, I would like to say that I am not throwing under the bus the works and theories of the scientists who came before me. I sincerely acknowledge their effort and the beautiful body of work they put forth. I am grateful to them and I bless the Lord for them because they laid the foundation upon which I am building today. In Nikola Tesla's words, it is my turn to roll the wheel and I am locked to the infinite source, that is the God of Abraham, Isaac, and Jacob, the Holy One of Israel.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const downloadBar = document.getElementById('app-download');
+    const container = document.querySelector('.container');
+    const isAndroid = /android/i.test(userAgent);
+    
+    if (!isAndroid) {
+        downloadBar.style.display = 'flex';
+    } else {
+        container.style.marginTop = '2rem';
+    }
+})();
+
+function updateStatus(){
+    const offline=!navigator.onLine;
+    document.getElementById('offline-screen').style.display=offline?'flex':'none';
+    document.getElementById('main-content').style.display='block';
+}
+window.addEventListener('online',updateStatus);
+window.addEventListener('offline',updateStatus);
+updateStatus();
+
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('selectstart',e=>e.preventDefault());
+</script>
 </body>
 </html>
